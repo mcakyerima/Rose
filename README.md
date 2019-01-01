@@ -44,7 +44,7 @@ with `0` if it was not zero already.
   * For `x` converions, `0x` is prepended for non-zero numbers.
   * For `X` conversions, `0X` is prepeneded for non-zero numbers.
 
-* **` ` (space)**
+* **(space)**
   * A blank is left before a positive number or empty string produced by a 
 signed conversion.
 
@@ -216,8 +216,8 @@ int main(void)
 ---
 
 ## Authors
-* Brennan D Baraban <[bdbaraban](https://github.com/bdbaraban)> 
-- Holberton School student
+* Brennan D Baraban <[bdbaraban](https://github.com/bdbaraban)> - 
+Holberton School student
 * Michael Klein <[mKleinCreative](https://github.com/mKleinCreative)> - 
 Holberton School student
 
