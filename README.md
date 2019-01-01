@@ -56,8 +56,8 @@ conversion.
 * **0**
   * For `d`, `i`, `o`, `u`, `x`, and `X` conversions, the converted value is 
 padded on the left with zeroes rather than blanks.
-  * If the `0` is provided to a numeric conversion with a specified 
-precision, the `0` flag is ignored.
+  * If the `0` flag is provided to a numeric conversion with a specified 
+precision, it is ignored.
 
 * **-**
   * The converted value is left-justified (padded on the right with blanks 
