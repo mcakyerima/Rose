@@ -69,7 +69,7 @@ with the conversion specifier, and are used in the order given.
 
 The character `%` may be followed by zero or more of the following flags:
 
-##### #
+#### #
   * For `o` conversions, the first character of the output string is prefixed
   with `0` if it was not zero already.
   * For `x` converions, `0x` is prepended for non-zero numbers.
@@ -87,7 +87,7 @@ Output:
 0x7
 ```
 
-##### (space)
+#### (space)
   * A blank is left before a positive number or empty string produced by a
   signed conversion.
 
@@ -103,7 +103,7 @@ Output:
  7
 ```
 
-##### +
+#### +
   * A sign (`+` or `-`) is always placed before a number produced by signed
   conversion.
   * Overrides a space flag.
@@ -120,7 +120,7 @@ Output:
 +7
 ```
 
-##### 0
+#### 0
   * For `d`, `i`, `o`, `u`, `x`, and `X` conversions, the converted value is
   padded on the left with zeroes rather than blanks.
   * If the `0` flag is provided to a numeric conversion with a specified
@@ -138,7 +138,7 @@ Output:
 00007
 ```
 
-##### -
+#### -
   * The converted value is left-justified (padded on the right with blanks
   instead of on the left with blanks or zeroes).
   * Overrides a `0` flag.
@@ -210,7 +210,7 @@ the argument `6` is considered the precision for the conversion of the decimal
 After flags, width, and precision and before a conversion specifier, one of the
 following length modifiers may be provided:
 
-##### h
+#### h
 Specifies that an integer conversion corresponds to a `short int` or
 `unsigned short int` argument.
 
@@ -226,7 +226,7 @@ Output:
 32767
 ```
 
-##### l
+#### l
 Specifies that an integer conversion corresponds to a `long int` or
 `unsigned long int` argument.
 
@@ -248,7 +248,7 @@ The conversion specifier (introduced by the character `%`) is a character that
 specifies the type of conversion to be applied. The `_printf` function
 supports the following conversion specifiers:
 
-##### d, i
+#### d, i
 The `int` argument is converted to signed decimal notation.
 
 Example `main.c`:
@@ -263,7 +263,7 @@ Output:
 7
 ```
 
-##### b
+#### b
 The `unsigned int` argument is converted to signed decimal notation.
 
 Example `main.c`:
@@ -278,7 +278,7 @@ Output:
 111
 ```
 
-##### o, u, x, X
+#### o, u, x, X
 The `unsigned int` argument is converted to unsigned octal (`o`), unsigned
 decimal (`u`), or unsigned hexadecimal (`x` and `X`). The letters `abcdef` are
 used for `x` conversions and the letters `ABCDEF` are used for `X` conversions.
@@ -295,7 +295,7 @@ Output:
 115
 ```
 
-##### c
+#### c
 The `int` argument is converted to an `unsigned char`.
 
 Example `main.c`:
@@ -310,7 +310,7 @@ Output:
 0
 ```
 
-##### s
+#### s
 The `const char *` argument is expected to be a pointer to a character array
 (aka. pointer to a string). Characters from the array are written starting
 from the first element of the array and ending at, but not including, the
@@ -328,7 +328,7 @@ Output:
 Hello, World!
 ```
 
-##### S
+#### S
 Identical to the `s` conversion specifier, except any non-printable characters
 in the array (ie. characters with an ASCII value < 32 or >= 127) are written
 as `\x` followed by the ASCII code value in hexadecimal (upper case, two
@@ -379,7 +379,7 @@ Output:
 Uryyb, Jbeyq
 ```
 
-##### p
+#### p
 The address of the argument is written. The address is written in hexadecimal
 with a leading `0x`.
 
@@ -397,7 +397,7 @@ Output:
 0x561a6d7bab5d
 ```
 
-##### %
+#### %
 A `%` is written. No argument is converted. The complete conversion
 specification is `%%`.
 
