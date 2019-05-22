@@ -363,7 +363,8 @@ Output:
 dlroW ,olleH
 ```
 
-R
+#### R
+
 Identical to the `s` conversion specifier, except each character of the array
 is converted to its corresponding character in ROT13 before being written.
 
