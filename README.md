@@ -69,7 +69,7 @@ with the conversion specifier, and are used in the order given.
 
 The character `%` may be followed by zero or more of the following flags:
 
-* **#**
+##### #
   * For `o` conversions, the first character of the output string is prefixed
   with `0` if it was not zero already.
   * For `x` converions, `0x` is prepended for non-zero numbers.
@@ -87,7 +87,7 @@ Output:
 0x7
 ```
 
-* **(space)**
+##### (space)
   * A blank is left before a positive number or empty string produced by a
   signed conversion.
 
@@ -103,7 +103,7 @@ Output:
  7
 ```
 
-* **+**
+##### +
   * A sign (`+` or `-`) is always placed before a number produced by signed
   conversion.
   * Overrides a space flag.
@@ -120,7 +120,7 @@ Output:
 +7
 ```
 
-* **0**
+##### 0
   * For `d`, `i`, `o`, `u`, `x`, and `X` conversions, the converted value is
   padded on the left with zeroes rather than blanks.
   * If the `0` flag is provided to a numeric conversion with a specified
@@ -138,7 +138,7 @@ Output:
 00007
 ```
 
-* **-**
+##### -
   * The converted value is left-justified (padded on the right with blanks
   instead of on the left with blanks or zeroes).
   * Overrides a `0` flag.
@@ -210,9 +210,9 @@ the argument `6` is considered the precision for the conversion of the decimal
 After flags, width, and precision and before a conversion specifier, one of the
 following length modifiers may be provided:
 
-* **h**
-  * Specifies that an integer conversion corresponds to a `short int` or
-  `unsigned short int` argument.
+##### h
+Specifies that an integer conversion corresponds to a `short int` or
+`unsigned short int` argument.
 
 Example `main.c`:
 ```
@@ -226,9 +226,9 @@ Output:
 32767
 ```
 
-* **l**
-  * Specifies that an integer conversion corresponds to a `long int` or
-  `unsigned long int` argument.
+##### l
+Specifies that an integer conversion corresponds to a `long int` or
+`unsigned long int` argument.
 
 Example `main.c`:
 ```
@@ -248,8 +248,8 @@ The conversion specifier (introduced by the character `%`) is a character that
 specifies the type of conversion to be applied. The `_printf` function
 supports the following conversion specifiers:
 
-* **d, i**
-  * The `int` argument is converted to signed decimal notation.
+##### d, i
+The `int` argument is converted to signed decimal notation.
 
 Example `main.c`:
 ```
@@ -263,8 +263,8 @@ Output:
 7
 ```
 
-* **b**
-  * The `unsigned int` argument is converted to signed decimal notation.
+##### b
+The `unsigned int` argument is converted to signed decimal notation.
 
 Example `main.c`:
 ```
@@ -278,10 +278,10 @@ Output:
 111
 ```
 
-* **o, u, x, X**
-  * The `unsigned int` argument is converted to unsigned octal (`o`), unsigned
-  decimal (`u`), or unsigned hexadecimal (`x` and `X`). The letters `abcdef` are
-  used for `x` conversions and the letters `ABCDEF` are used for `X` conversions.
+##### o, u, x, X
+The `unsigned int` argument is converted to unsigned octal (`o`), unsigned
+decimal (`u`), or unsigned hexadecimal (`x` and `X`). The letters `abcdef` are
+used for `x` conversions and the letters `ABCDEF` are used for `X` conversions.
 
 Example `main.c`:
 ```
@@ -295,8 +295,8 @@ Output:
 115
 ```
 
-* **c**
-  * The `int` argument is converted to an `unsigned char`.
+##### c
+The `int` argument is converted to an `unsigned char`.
 
 Example `main.c`:
 ```
@@ -310,11 +310,11 @@ Output:
 0
 ```
 
-* **s**
-  * The `const char *` argument is expected to be a pointer to a character array
-  (aka. pointer to a string). Characters from the array are written starting
-  from the first element of the array and ending at, but not including, the
-  terminating null byte (`\0`).
+##### s
+The `const char *` argument is expected to be a pointer to a character array
+(aka. pointer to a string). Characters from the array are written starting
+from the first element of the array and ending at, but not including, the
+terminating null byte (`\0`).
 
 Example `main.c`:
 ```
@@ -328,11 +328,11 @@ Output:
 Hello, World!
 ```
 
-* **S**
-  * Identical to the `s` conversion specifier, except any non-printable characters
-  in the array (ie. characters with an ASCII value < 32 or >= 127) are written
-  as `\x` followed by the ASCII code value in hexadecimal (upper case, two
-  characters).
+##### S
+Identical to the `s` conversion specifier, except any non-printable characters
+in the array (ie. characters with an ASCII value < 32 or >= 127) are written
+as `\x` followed by the ASCII code value in hexadecimal (upper case, two
+characters).
 
 Example `main.c`:
 ```
@@ -346,10 +346,10 @@ Output:
 Hello, World! \x0FFFFFFFFFFFFFFCE\x0FFFFFFFFFFFFFFA0
 ```
 
-* **r**
-  * Identical to the `s` conversion specifier, except characters from the array
-  are written in reverse, starting from, but not including, the terminating null
-  byte (`\0`) and ending at the first element of the array.
+r
+Identical to the `s` conversion specifier, except characters from the array
+are written in reverse, starting from, but not including, the terminating null
+byte (`\0`) and ending at the first element of the array.
 
 Example `main.c`:
 ```
@@ -363,9 +363,9 @@ Output:
 dlroW ,olleH
 ```
 
-* **R**
-  * Identical to the `s` conversion specifier, except each character of the array
-  is converted to its corresponding character in ROT13 before being written.
+R
+Identical to the `s` conversion specifier, except each character of the array
+is converted to its corresponding character in ROT13 before being written.
 
 Example `main.c`:
 ```
@@ -379,9 +379,9 @@ Output:
 Uryyb, Jbeyq
 ```
 
-* **p**
-  * The address of the argument is written. The address is written in hexadecimal
-  with a leading `0x`.
+##### p
+The address of the argument is written. The address is written in hexadecimal
+with a leading `0x`.
 
 Example `main.c`:
 ```
@@ -397,9 +397,9 @@ Output:
 0x561a6d7bab5d
 ```
 
-* **%**
-  * A `%` is written. No argument is converted. The complete conversion
-  specification is `%%`.
+##### %
+A `%` is written. No argument is converted. The complete conversion
+specification is `%%`.
 
 Example:
 ```
@@ -494,5 +494,5 @@ that prepares students for careers in the tech industry using project-based
 peer learning. For more information, visit [this link](https://www.holbertonschool.com/).
 
 <p align="center">
-  <img src="http://www.holbertonschool.com/holberton-logo.png" alt="Holberton School logo>
+  <img src="http://www.holbertonschool.com/holberton-logo.png" alt="Holberton School logo">
 </p>
