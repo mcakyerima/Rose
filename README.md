@@ -478,6 +478,10 @@ Output:
 * Brennan D Baraban <[bdbaraban](https://github.com/bdbaraban)>
 * Michael Klein <[mKleinCreative](https://github.com/mKleinCreative)>
 
+## License :lock:
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
 ## Acknowledgements :pray:
 
 The `_printf` function emulates functionality of the C standard library
