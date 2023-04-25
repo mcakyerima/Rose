@@ -1,9 +1,10 @@
 /*
  * File: base_converters.c
- * Auth: Brennan D Baraban
+ * Authors: Mohammed Ak Yerima
+ *		Rosemary Oti
  */
 
-#include "holberton.h"
+#include "main.h"
 
 unsigned int convert_sbase(buffer_t *output, long int num, char *base,
 		unsigned char flags, int wid, int prec);

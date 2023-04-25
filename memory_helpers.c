@@ -1,9 +1,10 @@
 /*
  * File: memory_helpers.c
- * Auth: Brennan D Baraban
+ * Auth: Mohammed Ak Yerima
+ *	Rosemary Oti
  */
 
-#include "holberton.h"
+#include "main.h"
 
 unsigned int _memcpy(buffer_t *output, const char *src, unsigned int n);
 void free_buffer(buffer_t *output);

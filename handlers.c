@@ -1,17 +1,17 @@
 /*
  * File: handlers.c
- * Auth: Brennan D Baraban
- *       Michael Klein
+ * Auth: Mohammed Ak Yerima
+ *       Rosemary Oti
  */
 
-#include "holberton.h"
-
-unsigned char handle_flags(const char *flag, char *index);
-unsigned char handle_length(const char *modifier, char *index);
-int handle_width(va_list args, const char *modifier, char *index);
-int handle_precision(va_list args, const char *modifier, char *index);
-unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
-		unsigned char, int, int, unsigned char);
+#include "main.h"
+/*
+ * unsigned char handle_flags(const char *flag, char *index);
+ * unsigned char handle_length(const char *modifier, char *index);
+ * int handle_width(va_list args, const char *modifier, char *index);
+ * int handle_precision(va_list args, const char *modifier, char *index);
+ *
+*/
 
 /**
  * handle_flags - Matches flags with corresponding values.
@@ -168,6 +168,8 @@ int handle_precision(va_list args, const char *modifier, char *index)
  *                     a corresponding conversion function.
  * @specifier: A pointer to a potential conversion specifier.
  *
+ * @int: int.
+ * @char: char specifer.
  * Return: If a conversion function is matched - a pointer to the function.
  *         Otherwise - NULL.
  */

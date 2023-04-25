@@ -1,10 +1,10 @@
 /*
  * File: _printf.c
- * Auth: Brennan D Baraban
- *       Michael Klein
+ * Auth: Mohammed Ak Yerima
+ *       Rosemary Oti
  */
 
-#include "holberton.h"
+#include "main.h"
 
 void cleanup(va_list args, buffer_t *output);
 int run_printf(const char *format, va_list args, buffer_t *output);
@@ -27,7 +27,8 @@ void cleanup(va_list args, buffer_t *output)
  * @format: Character string to print - may contain directives.
  * @output: A buffer_t struct containing a buffer.
  * @args: A va_list of arguments.
- *
+ * @*f: function pointer.
+ * @ int (*f):another pointer.
  * Return: The number of characters stored to output.
  */
 int run_printf(const char *format, va_list args, buffer_t *output)
